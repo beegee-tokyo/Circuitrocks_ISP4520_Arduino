@@ -2,5 +2,5 @@
     "name": "framework-arduinocircuitrocksisp4520",
     "description": "Arduino Wiring-based Framework (Insight SIP ISP4520 SoC)",
     "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino",
-    "version": "0.1.0"
+    "version": "~0.1.1"
 }

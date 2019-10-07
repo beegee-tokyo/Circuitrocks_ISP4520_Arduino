@@ -4,8 +4,7 @@
   "description": "Circuitrocks is a general distributor of open-source hardware in the Philippines. We were founded in 2015, located in Metro Manila, Philippines. Your source of electronic prototyping and open source hardware.",
   "url": "https://circuit.rocks/",
   "homepage": "https://circuit.rocks/",
-  "license": "GNU Lesser General Public
-License",
+  "license": "GNU Lesser General Public License",
   "engines": {
     "platformio": "<5"
   },
@@ -13,9 +12,19 @@ License",
     "type": "git",
     "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino"
   },
-  "version": "1.9.0",
+  "version": "0.1.1",
   "packageRepositories": [
-    "https://beegee-tokyo.github.io/package_circuitrocks_index.json"
+    "https://beegee-tokyo.github.io/package_circuitrocks_index.json",
+	{
+		"framework-arduinocircuitrocksisp4520": [
+        {
+          "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino/archive/0.1.1.tar.gz",
+          "sha1": "A593A9FF1137AFFE3BCD1B1182C64BAD7D61B2748B95D0C3804F626BFC699A24",
+          "version": "~0.1.1",
+          "system": "*"
+        }
+	  ]
+	}
   ],
   "frameworks": {
     "arduino": {
@@ -24,18 +33,32 @@ License",
     }
   },
   "packages": {
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "version": ">=1.60301.0,<1.80000.0"
+    },
     "framework-arduinocircuitrocksisp4520": {
       "type": "framework",
       "optional": true,
-      "version": "~0.1.0"
+      "version": "~0.1.1"
     },
-    "arm-none-eabi-gcc": {
-      "type": "toolchain",
-      "version": "~7-2017q4"
+    "tool-sreccat": {
+      "version": "~1.164.0"
     },
-    "nrfjprog": {
-      "type": "toolchain",
+    "tool-openocd": {
+      "type": "uploader",
       "optional": true,
-      "version": "~9.4.0"
+      "version": "~2.1000.0"
+    },
+    "tool-nrfjprog": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~1.90702.0"
+    },
+    "tool-jlink": {
+      "type": "uploader",
+      "optional": true,
+      "version": "^1.63208.0"
+    }
   }
 }
